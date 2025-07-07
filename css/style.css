@@ -5,7 +5,7 @@ body{
     min-height: 100vh; 
     margin: 0;
     padding: 0;
-    background-color: #F7F4F3;
+    background-color: #f5eeec;
 }
 
 
@@ -80,13 +80,59 @@ body{
     transform: scale(0.9);
 }
 .notfound{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: rgb(255, 72, 0);
 }
 .error-cont{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2rem;
 }
+.notfound-img{
+    display: none;
+    width: 17rem;
+    height: 15rem;
+    user-select: none;
+    margin-top: 3rem;
+}
+
+.resultWeather-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -3rem;
+}
+.data{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+.imgData{
+    width: 17rem;
+    height: 15rem;
+    user-select: none;
+    display: none;
+    margin-top: 8vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
