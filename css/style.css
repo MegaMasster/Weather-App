@@ -1,0 +1,152 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    background-color: #F7F4F3;
+}
+
+
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.header__title{
+    color: #F75590;
+}
+.header__line{
+    width: 100%;
+    height: 1px;
+    background-color: #5B2333;
+}
+
+
+
+
+
+.search-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+.search-box__active{
+    display: flex;
+    gap: 3rem
+}
+.search-box__input{
+    border-radius: 0.5rem;
+    border: solid 1px black;
+    width: 11rem;
+    height: 2rem;
+    appearance: none;
+    outline: none;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: #cbbfff;
+    transition: all 0.3s ease-in-out;
+}
+.search-box__input:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 1px 1px 30px 1px rgb(57, 153, 170);
+}
+.search-box__input:focus{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 0px 0px rgb(57, 153, 170);
+    border: solid 1px rgb(27, 178, 224);
+}
+.searchButton{
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #2f2a75;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.searchButton:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 1px 1px 30px 1px rgb(57, 153, 170);
+}
+.searchButton:active{
+    transform: scale(0.9);
+}
+.notfound{
+    font-size: 2rem;
+    color: rgb(255, 72, 0);
+}
+.error-cont{
+    display: flex;
+    margin-top: 2rem;
+}
+
+
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    width: 100%;
+    height: 13vh;
+    margin-top: auto;
+}
+.footer__line{
+    width: 50%;
+    height: 1px;
+    background-color: #5B2333;
+}
+.footer__myGitHub{
+    font-size: 1.2rem;
+}
+.footer__link{
+    font-size: 1.2rem;
+    transition: all 0.3 ease-in-out;
+    cursor: pointer;
+}
+.footer__copyright{
+    font-size: 1.2rem;
+}
+.footer__copyright-name{
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: rgb(182, 61, 24);
+}
+.footer__link{
+    font-size: 1.2rem;
+    display: inline-block; 
+    transform-origin: left center;
+    text-decoration: none;
+    color: rgb(182, 61, 24);
+    transition: all 0.3s ease-in-out;
+}
+.footer__link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.footer__link:active {
+    transform: scale(0.9);
+}
+.footer__link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    bottom: -3px; 
+    left: 0;
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 0, 255));
+    transition: all 0.3s ease-in-out;
+}
+.footer__link:hover::after {
+    width: 100%; 
+}
