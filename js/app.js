@@ -28,16 +28,11 @@ const checkWeather = async (city) => {
             weatherImg.style.display = "none"
         }
         
-
         if(data.cod == "200") {
             notFound.innerHTML = ""
             resultImg.style.display = "flex"
 
-            resultCountry.innerHTML = `Country: ${data.sys.country}`
-            resultCity.innerHTML = `City: ${data.name}`
-            resultTemp.innerHTML = `Temp: ${data.main.temp} °C`
-            resultWeather.innerHTML = `Weather: ${data.weather[0].main}`
-            resultWind.innerHTML = `Wind: ${data.wind.speed} m/s`
+            displayWeatherData(data)
 
             if(data.weather[0] && data.weather) {
                 switch(data.weather[0].main) {
@@ -63,21 +58,13 @@ const checkWeather = async (city) => {
             } 
 
         }else{
-            resultImg.style.display = "none"
-            resultCountry.innerHTML = ``
-            resultCity.innerHTML = ``
-            resultTemp.innerHTML = ``
-            resultWeather.innerHTML = ``
-            resultWind.innerHTML = ``
+            clearWeatherData(data)
         }
-
 
         if(!response.ok){
             console.error("Server error")
             throw new Error(data.message)
         }
-
-        
 
         console.log(data)
 
@@ -86,22 +73,22 @@ const checkWeather = async (city) => {
     }
 }
 
+function clearWeatherData(data) {
+    resultImg.style.display = "none"
+    resultCountry.innerHTML = ``
+    resultCity.innerHTML = ``
+    resultTemp.innerHTML = ``
+    resultWeather.innerHTML = ``
+    resultWind.innerHTML = ``
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function displayWeatherData(data) {
+    resultCountry.innerHTML = `Country: ${data.sys.country}`
+    resultCity.innerHTML = `City: ${data.name}`
+    resultTemp.innerHTML = `Temp: ${data.main.temp} °C`
+    resultWeather.innerHTML = `Weather: ${data.weather[0].main}`
+    resultWind.innerHTML = `Wind: ${data.wind.speed} m/s`
+}
 
 searchButton.addEventListener("click" , async () => {
     const city = document.querySelector(".search-box__input").value
