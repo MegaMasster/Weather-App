@@ -2,6 +2,7 @@ const searchButton = document.querySelector(".searchButton")
 const notFound = document.querySelector(".notfound")
 const weatherImg = document.querySelector(".notfound-img")
 const resultImg = document.querySelector(".imgData")
+const resultWeatherCont = document.querySelector("#data")
 
 const resultCountry = document.querySelector(".resultWeather-cont__country")
 const resultCity = document.querySelector(".resultWeather-cont__city")
@@ -80,6 +81,9 @@ function clearWeatherData(data) {
     resultTemp.innerHTML = ``
     resultWeather.innerHTML = ``
     resultWind.innerHTML = ``
+    resultWeatherCont.style = ""
+    resultWeatherCont.classList.remove("forRender")
+
 }
 
 function displayWeatherData(data) {
@@ -88,6 +92,7 @@ function displayWeatherData(data) {
     resultTemp.innerHTML = `Temp: ${data.main.temp} °C`
     resultWeather.innerHTML = `Weather: ${data.weather[0].main}`
     resultWind.innerHTML = `Wind: ${data.wind.speed} m/s`
+    resultWeatherCont.classList.add("forRender")
 }
 
 searchButton.addEventListener("click" , async () => {

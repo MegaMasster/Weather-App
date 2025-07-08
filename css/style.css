@@ -103,10 +103,17 @@ body{
     align-items: center;
     margin-top: -3rem;
 }
-.data{
+#data{
     display: flex;
+    justify-content: space-around;
     gap: 2rem;
     font-size: 1.3rem;
+    width: 115%;
+}
+.forRender{
+    background-color: #cbbfff;
+    border-radius: 5px;
+    color: rgb(126, 93, 80);
 }
 .imgData{
     width: 17rem;
